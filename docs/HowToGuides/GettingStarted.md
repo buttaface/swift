@@ -246,21 +246,21 @@ Phew, that's a lot to digest! Now let's proceed to the actual build itself!
    [using both Ninja and Xcode](#using-both-ninja-and-xcode).
 3. Build the toolchain with optimizations, debuginfo, and assertions and run
    the tests.
-   macOS:
-   - Via Ninja:
-     ```sh
-     utils/build-script --skip-build-benchmarks \
-       --skip-ios --skip-watchos --skip-tvos --swift-darwin-supported-archs "$(uname -m)" \
-       --sccache --release-debuginfo --swift-disable-dead-stripping --test
-     ```
-   - Via Xcode:
-     ```sh
-     utils/build-script --skip-build-benchmarks \
-       --skip-ios --skip-watchos --skip-tvos --swift-darwin-supported-archs "$(uname -m)" \
-       --sccache --release-debuginfo --swift-disable-dead-stripping --test \
-       --xcode
-     ```
-   Linux (uses Ninja):
+   - macOS:
+     - Via Ninja:
+       ```sh
+       utils/build-script --skip-build-benchmarks \
+         --skip-ios --skip-watchos --skip-tvos --swift-darwin-supported-archs "$(uname -m)" \
+         --sccache --release-debuginfo --swift-disable-dead-stripping --test
+       ```
+     - Via Xcode:
+       ```sh
+       utils/build-script --skip-build-benchmarks \
+         --skip-ios --skip-watchos --skip-tvos --swift-darwin-supported-archs "$(uname -m)" \
+         --sccache --release-debuginfo --swift-disable-dead-stripping --test \
+         --xcode
+       ```
+   - Linux (uses Ninja):
      ```sh
      utils/build-script --release-debuginfo --test --skip-early-swift-driver
      ```
